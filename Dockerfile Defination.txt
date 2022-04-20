@@ -1,3 +1,8 @@
+maven command to skip the test cases while install
+
+--- >  mvn clean install -Dmaven.test.skip=false
+
+
 Docker file definition
 
 >> Create a file without extention and with the name : Dockerfile (case sensitive)
@@ -17,7 +22,7 @@ COPY target/cards.jar cards.jar
 // This is the command which docker will use to run the image and create container from it. 
 // (To run the jar file using java command is :     java -jar cards.jar )
 
-ENTRYPOINT ["java","-jar","/cards/jar"]
+ENTRYPOINT ["java","-jar","/cards.jar"]
 
 
 
